@@ -4,6 +4,8 @@
       :ratio="560 / 315"
       src="https://www.youtube.com/embed/jUQ_tt_zJDo"
     />
+  </q-page>
+  <q-page class="">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <dotted-bar-chart></dotted-bar-chart>
     </div>
