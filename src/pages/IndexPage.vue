@@ -1,9 +1,8 @@
 <template>
   <q-page class="column flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 140px"
+    <q-video
+      :ratio="560 / 315"
+      src="https://www.youtube.com/embed/jUQ_tt_zJDo"
     />
 
     <div class="q-mt-xl">
