@@ -6,4 +6,20 @@
     </q-card-section>
     <q-resize-observer @resize="onResize" />
   </q-card>
+  <q-btn
+    class="q-mt-xl"
+    color="white"
+    text-color="blue"
+    unelevated
+    to="/"
+    label="Go Home"
+    no-caps
+  />
 </template>
+<script>
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'ProgressPage',
+});
+</script>

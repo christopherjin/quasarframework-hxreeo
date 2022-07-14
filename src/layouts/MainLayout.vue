@@ -1,21 +1,25 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="hHh lpR lFf">
+    <q-header elevated class="bg-primary text-white" height-hint="98">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
+          </q-avatar>
+          Osteoporosis App
+        </q-toolbar-title>
       </q-toolbar>
+
+      <q-tabs align="left">
+        <q-route-tab to="/Activities" label="Activities" />
+        <q-route-tab to="/Medication" label="Medication" />
+        <q-route-tab to="/ProgressPage" label="Progress" />
+      </q-tabs>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered>
       <q-list>
         <q-item-label header>Essential Links</q-item-label>
 
@@ -36,26 +40,21 @@
 <script>
 import { defineComponent, ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
-
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Possible Link?',
+    caption: 'Dr. Gardner Project WIP',
     icon: 'school',
     link: 'Stanford',
   },
 ];
-
 export default defineComponent({
   name: 'MainLayout',
-
   components: {
     EssentialLink,
   },
-
   setup() {
     const leftDrawerOpen = ref(false);
-
     return {
       essentialLinks: linksList,
       leftDrawerOpen,

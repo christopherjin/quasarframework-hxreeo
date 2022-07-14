@@ -5,7 +5,7 @@
       src="https://www.youtube.com/embed/jUQ_tt_zJDo"
     />
   </q-page>
-  <q-button></q-button>
+  <q-card class="center"> lorem </q-card>
 </template>
 
 <script>
