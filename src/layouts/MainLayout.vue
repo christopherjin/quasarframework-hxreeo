@@ -13,8 +13,8 @@
       </q-toolbar>
 
       <q-tabs align="left">
-        <q-route-tab to="/Activities" label="Activities" />
-        <q-route-tab to="/Medication" label="Medication" />
+        <q-route-tab to="/ActivitiesPage" label="Activities" />
+        <q-route-tab to="/MedicationPage" label="Medication" />
         <q-route-tab to="/ProgressPage" label="Progress" />
       </q-tabs>
     </q-header>
@@ -45,7 +45,7 @@ const linksList = [
     title: 'Possible Link?',
     caption: 'Dr. Gardner Project WIP',
     icon: 'school',
-    link: 'Stanford',
+    link: 'https://profiles.stanford.edu/michael-gardner',
   },
 ];
 export default defineComponent({
