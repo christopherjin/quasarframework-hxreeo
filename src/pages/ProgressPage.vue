@@ -5,7 +5,7 @@
     </q-card-section>
     <q-resize-observer @resize="onResize" />
   </q-card>
-  <q-input filled v-model="text" label="BPM" />
+  <q-input filled v-model="text" label="BMD" />
   <q-input filled v-model="text" label="Date" />
   <q-btn
     class="q-mt-xl"
