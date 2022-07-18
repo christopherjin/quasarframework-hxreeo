@@ -1,5 +1,5 @@
 <template>
-  <chartExample></chartExample>
+  <LineChart></LineChart>
   <q-input filled v-model="text" label="BMD" />
   <q-input filled v-model="text" label="Date" />
   <q-btn
@@ -24,14 +24,10 @@
 <script>
 import { defineComponent, defineAsyncComponent } from 'vue';
 
-const chartExample = defineAsyncComponent(
-  import('components/charts/LineChart.vue')
-);
-
 export default defineComponent({
   name: 'ProgressPage',
   components: {
-    chartExample,
+    LineChart,
   },
 });
 </script>

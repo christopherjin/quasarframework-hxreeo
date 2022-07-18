@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'linechart',
+  name: 'LineChart',
   data() {
     return {
       series: [
