@@ -25,13 +25,13 @@
 import { defineComponent, defineAsyncComponent } from 'vue';
 
 const chartExample = defineAsyncComponent(
-  import('components/charts/linechart.vue')
+  import('components/charts/LineChart.vue')
 );
 
 export default defineComponent({
   name: 'ProgressPage',
   components: {
-    linechart,
+    chartExample,
   },
 });
 </script>
