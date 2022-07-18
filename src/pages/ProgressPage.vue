@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <q-card> test </q-card>
+    <chartExample></chartExample>
 
     <q-input filled v-model="text" label="BMD" />
     <q-input filled v-model="text" label="Date" />
@@ -26,14 +26,14 @@
 </template>
 <script>
 import { defineComponent, defineAsyncComponent } from 'vue';
-const ApexLine = defineAsyncComponent(() =>
+const chartExample = defineAsyncComponent(() =>
   import('components/charts/ApexLine.vue')
 );
 
 export default defineComponent({
   name: 'ProgressPage',
   components: {
-    ApexLine,
+    chartExample,
   },
 });
 </script>

@@ -17,7 +17,7 @@ export default defineComponent({
     return {
       options: {
         title: {
-          text: 'ApexLine',
+          text: 'Some Score Progress',
           align: 'left',
         },
         chart: {
