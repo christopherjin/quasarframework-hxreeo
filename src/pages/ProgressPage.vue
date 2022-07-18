@@ -28,6 +28,7 @@
 </template>
 <script>
 import { defineComponent } from 'vue';
+import VueApexCharts from 'vue3-apexcharts';
 
 export default defineComponent({
   name: 'ProgressPage',
