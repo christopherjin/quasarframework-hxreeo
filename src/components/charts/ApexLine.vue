@@ -5,6 +5,16 @@
     :options="options"
     :series="series"
   ></apexchart>
+  <q-btn
+    class="q-mt-xl"
+    color="white"
+    text-color="blue"
+    unelevated
+    label="Update"
+    @click="UpdateChart"
+    no-caps
+    padding
+  />
 </template>
 
 <script>
@@ -44,6 +54,21 @@ export default defineComponent({
           data: [30, 40, 45, 50, 49, 60, 70, 91],
         },
       ],
+    };
+  },
+  setup() {
+    const updateChart = () => {
+      const max = 90;
+      const min = 20;
+      const newData = this.series[0].data.map(() => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      });
+      // In the same way, update the series option
+      this.series = [
+        {
+          data: newData,
+        },
+      ];
     };
   },
 });
