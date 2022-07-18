@@ -1,10 +1,5 @@
 <template>
-  <q-card>
-    <q-card-section>
-      <div ref="dottedbarchart" id="dottedbarChart" style="height: 250px"></div>
-    </q-card-section>
-    <q-resize-observer @resize="onResize" />
-  </q-card>
+  <chartExample></chartExample>
   <q-input filled v-model="text" label="BMD" />
   <q-input filled v-model="text" label="Date" />
   <q-btn
@@ -27,10 +22,16 @@
   />
 </template>
 <script>
-import { defineComponent } from 'vue';
-import VueApexCharts from 'vue3-apexcharts';
+import { defineComponent, defineAsyncComponent } from 'vue';
+
+const chartExample = defineAsyncComponent(
+  import('components/charts/linechart.vue')
+);
 
 export default defineComponent({
   name: 'ProgressPage',
+  components: {
+    linechart,
+  },
 });
 </script>
