@@ -1,9 +1,7 @@
 <template>
   <q-page padding>
-    <chartExample></chartExample>
+    <chartExample> </chartExample>
 
-    <q-input filled v-model="text" label="BMD" />
-    <q-input filled v-model="text" label="Date" />
     <q-btn
       class="q-mt-xl"
       color="white"

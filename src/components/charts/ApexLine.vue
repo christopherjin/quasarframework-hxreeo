@@ -5,13 +5,19 @@
     :options="options"
     :series="series"
   ></apexchart>
+
+  <q-form>
+    <q-input filled v-model="inputBMD" label="BMD" autogrow />
+    <q-input filled v-model="inputDays" label="Date following fall?" autogrow />
+  </q-form>
+
   <q-btn
     class="q-mt-xl"
     color="white"
     text-color="blue"
     unelevated
     label="Update"
-    @click="UpdateChart"
+    @click="updateChart"
     no-caps
     padding
   />
@@ -20,10 +26,14 @@
 <script>
 import { defineComponent } from 'vue';
 import { getCssVar } from 'quasar';
+import { ref } from 'vue';
+
+const inputBMD = ref('BMD');
+const inputDays = ref('Days');
 
 export default defineComponent({
   name: 'ApexLine',
-  data() {
+  data: function () {
     return {
       options: {
         title: {
@@ -45,21 +55,21 @@ export default defineComponent({
           },
         },
         xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998],
+          categories: [],
         },
       },
       series: [
         {
           name: 'series-1',
-          data: [30, 40, 45, 50, 49, 60, 70, 91],
+          data: [],
         },
       ],
     };
   },
-  setup() {
-    const updateChart = () => {
-      const max = 90;
-      const min = 20;
+  methods: {
+    updateChart() {
+      const score = 'input_BMD';
+      const min = 'Date';
       const newData = this.series[0].data.map(() => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
       });
@@ -69,7 +79,7 @@ export default defineComponent({
           data: newData,
         },
       ];
-    };
+    },
   },
 });
 </script>
